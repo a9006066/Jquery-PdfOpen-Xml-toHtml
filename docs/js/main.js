@@ -22,39 +22,66 @@
         })
 
     })
+
+    $("#openPDF").click(() => {
+
+        // create PDF
+        PDFJS.getDocument('pdf/transglobe_web.pdf').then((pdf) => {
+
+            for (var pageNum = 1; pageNum < pdf.numPages; ++pageNum) {
+                pdf.getPage(pageNum).then((page) => {
+                    // you can now use *page* here
+                    var scale = 1.5;
+                    var viewport = page.getViewport(1);
+
+                    var canvas = document.createElement('canvas');
+                    var context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+
+                    var renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    
+                    page.render(renderContext);
+                    document.getElementById('pdf-container').appendChild(canvas);
+                });
+            }
+        })
+
+        //jquery dialog
+        $("#dialog").dialog(
+            {
+                dialogClass: "no-close",
+                maxWidth: 1000,
+                maxHeight: 900,
+                width: 800,
+                height: 700,
+                modal: true,
+                buttons: {
+                    "Create": function () {
+                        $(this).dialog("close");
+                    },
+                    Cancel: function () {
+                        $(this).dialog("close");
+                    }
+                },
+            }
+        );
+
+    })
+
+
+
+
+
 })()
 
 
 
 
-$("#openPDF").click(function() {
 
-    PDFJS.getDocument('https://cdn.rawgit.com/mozilla/pdf.js/master/web/compressed.tracemonkey-pldi-09.pdf').then(function(pdf) {
-        for (var pageNum = 1; pageNum < pdf.numPages; ++pageNum) {
-          pdf.getPage(pageNum).then(function(page) {
-            // you can now use *page* here
-      
-            var scale = 1.5;
-            var viewport = page.getViewport(1);
-      
-            var canvas = document.createElement('canvas');
-            var context = canvas.getContext('2d');
-            canvas.height = viewport.height;
-            canvas.width = viewport.width;
-      
-            var renderContext = {
-              canvasContext: context,
-              viewport: viewport
-            };
-            page.render(renderContext);
-      
-            document.getElementById('pdf-container').appendChild(canvas);
-          });
-        }
-      })
-
-
-})
 
 
 

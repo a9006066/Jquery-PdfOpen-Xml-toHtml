@@ -66,3 +66,37 @@
 #annotation {
   color: red;
 }
+
+.angularPic{
+  background: url(img/angular.jpg)no-repeat;background-size: 100% 100% ;padding-top:120px; border-radius:10px; width: 115%;
+}
+
+.angularPic h4{
+ padding:0px;margin:0px; display:block;
+}
+
+.booStrapPic{
+  background: url(img/bootstrap.jpg)no-repeat;background-size: 95% 90% ;padding-top:120px; border-radius:10px; width: 70%;
+}
+
+.booStrapPic h4{
+  padding:0px;margin-top:0px; display:block;
+ }
+ 
+ .cssPic{
+  background: url(img/css.png)center no-repeat;background-size: 80% 80% ;padding-top:120px; border-radius:10px; width:70%;margin-left: 50px;
+}
+
+.cssPic h4{
+  padding:0px;margin-top:0px; display:block;
+ }
+ 
+
+ .jsPic{
+  background: url(img/js.png)center no-repeat;background-size: 60% 60% ;padding-top:120px; border-radius:10px; width: 70%;
+}
+
+.jsPic h4{
+  padding:0px;margin-top:0px; display:block;
+ }
+ 
