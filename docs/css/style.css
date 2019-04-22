@@ -1,24 +1,37 @@
-/* .container {
-  width: 600px;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
   margin: 0 auto;
-} */
+}
 
 .section_cont {
   width: 100%;
   clear: both;
   background: #fafafa;
-  overflow: auto;
+  /* overflow: auto; */
   border-radius: 0 0 5px 5px;
   border: 1px solid #b8b8b8;
   border-top: 3px solid #3593d3;
 }
 
-/* .section_cont.container {
-  overflow-y: auto;
-  padding: 0px;
-  margin-bottom: 15px;
-  min-height: 510px;
-} */
+.nav {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  background-color: lightskyblue;
+  /* color:white; */
+}
+
+#from{
+  margin-top: 30px;
+}
+
+
 
 #rightTable_1 thead th {
   font-size: medium;
@@ -43,8 +56,8 @@
 }
 
 #rightTable_2 tbody td {
-    text-align: center;
-  }
+  text-align: center;
+}
 
 #remind {
   margin: 0 auto;
@@ -67,36 +80,59 @@
   color: red;
 }
 
-.angularPic{
-  background: url(img/angular.jpg)no-repeat;background-size: 100% 100% ;padding-top:120px; border-radius:10px; width: 115%;
+.angularPic {
+  background: url(img/angular.jpg) no-repeat;
+  background-size: 100% 100%;
+  padding-top: 120px;
+  border-radius: 10px;
+  width: 115%;
 }
 
-.angularPic h4{
- padding:0px;margin:0px; display:block;
+.angularPic h4 {
+  padding: 0px;
+  margin: 0px;
+  display: block;
 }
 
-.booStrapPic{
-  background: url(img/bootstrap.jpg)no-repeat;background-size: 95% 90% ;padding-top:120px; border-radius:10px; width: 70%;
+.booStrapPic {
+  background: url(img/bootstrap.jpg) no-repeat;
+  background-size: 95% 90%;
+  padding-top: 120px;
+  border-radius: 10px;
+  width: 70%;
 }
 
-.booStrapPic h4{
-  padding:0px;margin-top:0px; display:block;
- }
- 
- .cssPic{
-  background: url(img/css.png)center no-repeat;background-size: 80% 80% ;padding-top:120px; border-radius:10px; width:70%;margin-left: 50px;
+.booStrapPic h4 {
+  padding: 0px;
+  margin-top: 0px;
+  display: block;
 }
 
-.cssPic h4{
-  padding:0px;margin-top:0px; display:block;
- }
- 
-
- .jsPic{
-  background: url(img/js.png)center no-repeat;background-size: 60% 60% ;padding-top:120px; border-radius:10px; width: 70%;
+.cssPic {
+  background: url(img/css.png) center no-repeat;
+  background-size: 80% 80%;
+  padding-top: 120px;
+  border-radius: 10px;
+  width: 70%;
+  margin-left: 50px;
 }
 
-.jsPic h4{
-  padding:0px;margin-top:0px; display:block;
- }
- 
+.cssPic h4 {
+  padding: 0px;
+  margin-top: 0px;
+  display: block;
+}
+
+.jsPic {
+  background: url(img/js.png) center no-repeat;
+  background-size: 60% 60%;
+  padding-top: 120px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+.jsPic h4 {
+  padding: 0px;
+  margin-top: 0px;
+  display: block;
+}
