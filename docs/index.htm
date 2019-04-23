@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="UTF-8">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <div class="section_cont" ng-controller="creative.trendController">
@@ -17,10 +19,6 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#">Angular</a></li>
                     <li><a href="#">BootStrap</a></li>
-
-
-
-
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             Jquery
@@ -39,10 +37,11 @@
                 </ul>
             </div>
             <!-- from -->
-            <div id="from" class="row">
+            <div id="from" class="row" style="margin-top:-10px;">
                 <!--右半部-->
                 <div class="col-lg-7 col-md-7">
                     <!--表格一-->
+                    <h3>PDFJS實作</h3>
                     <table id="rightTable_1" class="table table-bordered" style="border: solid grey 1px">
                         <thead>
                             <tr>
@@ -53,22 +52,23 @@
                         <tbody>
                             <tr>
                                 <td>
-                                    <a href="#">保險公司理賠失誤「同一次住院」認定大不同</a>
+                                    <a id ="dialogPDF"href="#">使用jquery dialog開啟PDF</a>
                                 </td>
                                 <td rowspan="2">
-                                    <a id="openPDF" href="#">常件理賠案例(一)</a>
+                                    <a id="openPDF" href="#">另開Viewer.html網頁PDF</a>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <a href="#"> 壽險業申訴率低排行前三名是這三家</a>
+                                    <a href="pdf/transglobe_web.pdf" download="HTML教學">下載PDF</a>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                     <!--表格二-->
-                    <table id="rightTable_2" class="table table-bordered table-striped" style="border: solid grey 1px">
+                    <h3>外部XML解析</h3>
+                    <table id="rightTable_2" class="table table-bordered table-striped" style="border: solid grey 1px;">
                         <thead>
                             <tr class="active">
                                 <th>幣別</th>
@@ -93,8 +93,8 @@
 
     <script src="lib/jquery/dist/jquery.js"></script>
     <script src="lib/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
-    <script src="lib/pdf_old/pdf.js"></script>
-    <script src="lib/pdf_old/web/viewer.js"></script>
+    <script src="lib/pdf_old/build/pdf.js"></script>
+    <!-- <script src="lib/pdf_old/build/web/viewer.js"></script> -->
     <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="js/main.js"></script>
 </body>
